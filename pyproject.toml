@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-starter-python"
+version = "1.0.0"
+description = "Simple voice AI assistant built with LiveKit Agents for Python"
+requires-python = ">=3.9"
+
+dependencies = [
+    "livekit-agents[silero,turn-detector]~=1.2",
+    "livekit-plugins-openai~=1.2",
+    "livekit-plugins-noise-cancellation>=0.2,<1",
+    "python-dotenv>=1.0,<2",
+    "requests>=2.32,<3",
+    "geopy>=2.4,<3",
+
+    "langchain>=0.3.27,<0.4",
+    "langchain-community>=0.3.31,<0.4",
+    # REMOVE: "langchain-openai" (not needed)
+    "openai>=2.5,<3",
+
+    "faiss-cpu>=1.12,<2",
+    "pypdf>=6.1,<7",
+    "tiktoken>=0.12,<1", ]
+
+    [dependency-groups]
+    dev = [
+        "pytest",
+        "pytest-asyncio",
+        "ruff",
+    ]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.ruff]
+line-length = 88
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "B", "A", "C4", "UP", "SIM", "RUF"]
+ignore = ["E501"]  # Line too long (handled by formatter)
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
