@@ -1,12 +1,6 @@
 .env
-.env.*
-!.env.example
+.env.local
+node_modules/
+__pycache__/
+venv/
 .DS_Store
-__pycache__
-.idea
-KMS
-.venv
-.vscode
-*.egg-info
-.pytest_cache
-.ruff_cache
