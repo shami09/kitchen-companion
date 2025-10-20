@@ -483,7 +483,7 @@ Expected output:
 - **Persistence**: Requires file system access
 - **Production Alternative**: Would use Pinecone, Weaviate, or Qdrant for production
 
-**Production Migration Path**:
+**Production Migration Path**: (Future endevor)
 ```python
 # Easy migration to Pinecone
 from langchain_community.vectorstores import Pinecone
@@ -497,7 +497,7 @@ vectorstore = Pinecone.from_documents(texts, embeddings, index_name="cookbook")
 **Rationale**:
 - **Mature Ecosystem**: Well-documented, widely used
 - **Abstractions**: High-level APIs for document loading, splitting, embeddings
-- **Flexibility**: Easy to swap vector stores, LLMs, embeddings
+- **Flexibility**: Easy to swap vector stores, LLMs, and embeddings
 - **Integration**: Built-in support for FAISS, OpenAI, retrieval chains
 
 **Alternatives Considered**:
@@ -705,32 +705,12 @@ result = qa_chain({"query": user_question})
 
 ## AI Tools Used
 
-### 1. Claude (Anthropic)
-**Usage**: Architecture design, code generation, debugging assistance
-- Generated initial React component structure
-- Helped debug LiveKit room connection issues
-- Provided FastAPI endpoint design patterns
-- Assisted with TypeScript type definitions
 
-### 2. GitHub Copilot
-**Usage**: Code completion, boilerplate generation
-- Auto-completed common patterns (error handling, async functions)
-- Generated TypeScript interfaces
-- Suggested library imports and function signatures
-
-### 3. OpenAI GPT-4
+### OpenAI GPT-4o
 **Usage**: Prompt engineering, persona development
 - Refined Gordon Ramsay personality prompts
 - Generated example conversations for testing
 - Helped craft signature phrase patterns
-
-### 4. ChatGPT (GPT-4)
-**Usage**: Documentation, explanation generation
-- Generated setup instructions
-- Helped structure README sections
-- Provided deployment guidance
-
-**Note**: All AI-generated code was reviewed, tested, and modified to fit the specific requirements of this project. AI tools accelerated development but all architectural decisions and implementations were human-directed.
 
 ---
 
