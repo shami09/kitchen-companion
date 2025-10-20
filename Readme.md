@@ -303,7 +303,7 @@ livekit-plugins-openai==0.8.3
 # RAG System
 langchain==0.1.0
 langchain-community==0.0.10
-openai==1.6.1
+openai==2.5.0
 faiss-cpu==1.7.4
 pypdf==3.17.1
 
@@ -510,7 +510,7 @@ vectorstore = Pinecone.from_documents(texts, embeddings, index_name="cookbook")
 **Decision**: 1000 characters per chunk, 200 character overlap.
 
 **Rationale**:
-- **Context Window**: Fits well within GPT-4's context limits
+- **Context Window**: Fits well within GPT-4o's context limits
 - **Semantic Coherence**: 1000 chars typically captures complete concepts/paragraphs
 - **Overlap**: 200 chars prevents splitting mid-concept at boundaries
 - **Performance**: Balances retrieval accuracy with token usage
