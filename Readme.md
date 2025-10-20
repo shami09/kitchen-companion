@@ -31,9 +31,10 @@ But our Sous chef here is also going to help us in getting ingredients and wait 
 1. **Real-Time Voice Conversation** - Hands-free cooking guidance using LiveKit's voice pipeline
 2. **Gordon Ramsay Persona** - Authentic personality with adjustable intensity levels (PG, PG-13, TV-MA)
 3. **RAG-Enabled Cookbook Knowledge** - Upload PDF cookbooks for professional reference
-4. **Live Transcription** - See what you and Chef Ramsay are saying in real-time
-5. **Tool Integration** - Unit conversions, nearby grocery store finder, location services
-6. **Dynamic PDF Upload** - Add cookbook knowledge without restarting the agent
+4. **Slow step-by-step** recipe dictation and explanation. Asks if you want a summary or a complete recipe with a guide
+5. **Live Transcription** - See what you and Chef Ramsay are saying in real-time
+6. **Tool Integration** - Unit conversions, nearby grocery store finder, location services
+7. **Dynamic PDF Upload** - Add cookbook knowledge without restarting the agent
 
 ---
 
@@ -256,7 +257,7 @@ Agent: "Right! Let me find you the BEST local markets..."
 ### 6. PDF Management System 
 - **Upload Interface**: Drag-and-drop or click to upload
 - **Status Display**: Shows uploaded PDFs and vector count
-- **Multiple PDFs**: Merge multiple cookbooks into single knowledge base
+- **Multiple PDFs**: Merge multiple cookbooks into a single knowledge base
 - **Refresh Status**: Real-time update of vectorstore info
 - **Error Handling**: Validates PDF format, size limits, API key configuration
 
@@ -345,13 +346,13 @@ mkdir -p vectorstore uploaded_pdfs
 ### 3. Frontend Setup
 
 ```bash
-cd frontend
+cd server/livekit-frontend
 npm install
 ```
 
 #### Configure Frontend Environment
 
-Create `frontend/.env`:
+Create `livekit-frontend/.env`:
 
 ```bash
 # Token server (for LiveKit room tokens)
@@ -401,6 +402,7 @@ Expected output:
 ```
 
 #### Terminal 2: LiveKit Agent
+this is an optional step
 ```bash
 # From project root
 cd src
