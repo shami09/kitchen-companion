@@ -77,6 +77,7 @@ The agent has three configurable "spice levels":
 5. **Encouragement**: "BEAUTIFUL! That's how it's done!" when techniques are correct
 6. **Corrections**: Direct but constructive - "That's not how you do it! Watch and learn!"
 
+Agent: https://kitchencomp8-1rivpt.sandbox.livekit.io/
 ---
 
 ## Technical Architecture
