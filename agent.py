@@ -268,7 +268,7 @@ def initialize_rag() -> bool:
         _qa_chain = RetrievalQA.from_chain_type(
             llm=ChatOpenAI(
                 model="gpt-4o-mini",
-                temperature=0.4,
+                temperature=0.0,
                 openai_api_key=OPENAI_API_KEY,
             ),
             chain_type="stuff",
